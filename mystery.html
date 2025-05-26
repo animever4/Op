@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animeverse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Toon+Jr&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      font-family:'Toon Jr', sans-serif;
+      color: #ddd;
+    }
+
+    header {
+  background-color: #1c1c1c;
+  padding: 20px 24px;
+  user-select: none;
+  color: #f0f0f0;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 10px 24px;
+  background-color: darkblue;
+  user-select: none;
+  flex-wrap: wrap;
+}
+h3{
+  color: white;
+}
+    nav a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #55cfff;
+      background-color: red;
+      display: flex;
+      
+    }
+
+    
+   
+    
+
+    .anime-section, .scroll-movies, 
+   
+    .movie-heading {
+   font-size: 2em;
+   margin: 20px 0 10px 20px;
+   font-style: italic;
+   font-family: sans-serif;
+ }
+    .movie-heading u, {
+      text-decoration-color: #00bfff;
+    }
+    
+    .anime-heading {
+      font-size: 1em;
+      margin-bottom: 20px;
+      font-style: italic;
+      font-family: sans-serif;
+    }
+
+    /* Changed scroll-section to grid layout and removed scrolling */
+    .scroll-section {
+      display: grid;
+      gap: 16px;
+      padding-bottom: 12px;
+      grid-template-columns: repeat(6, 1fr);
+      /* no overflow-x */
+    }
+    .imdb-rating {
+  font-size: 13px;
+  color: #ffcc00;
+  margin-top: 5px;
+}
+
+
+    /* Anime card styles like Toonstream */
+    .anime-card {
+      width: 100%; /* Full width of grid column */
+      background-color: #181818;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.5);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: #eee;
+      user-select: none;
+    }
+    .anime-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.8);
+      z-index: 10;
+    }
+
+    /* Image container with 1:1 ratio */
+    .anime-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9 / 13;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #2a2a2a;
+      border-radius: 8px 8px 0 0;
+      user-select: none;
+    }
+
+    .anime-card h3 {
+      margin: 8px 0 12px;
+      font-size: 14px;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px 24px;
+      background-color: #1c1c1c;
+      color: #888;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .scroll-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
+     
+    }
+    .scroll-movies .anime-card {
+      flex: 0 0 auto;
+      width: 150px;
+      scroll-snap-align: start;
+    }
+    
+   
+    .scroll-popular .anime-card {
+      flex: 0 0 auto;
+width: 150px;
+scroll-snap-align: start;
+    }
+
+    /* Keep existing horizontal scroll for other sections */
+    .scroll-movies, .scroll-popular {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+    .scroll-movies::-webkit-scrollbar,
+    .scroll-popular::-webkit-scrollbar {
+      height: 8px;
+    }
+    .scroll-movies::-webkit-scrollbar-thumb,
+    .scroll-popular::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Animeverse</h1>
+  </header>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./Mystery.html">Mystery</a>
+    <a href="#">Action</a>
+    <a href="./child.html">Child</a>
+  </nav>
+
+
+ 
+
+  <div class="anime-section">
+    <div class="anime-heading"><u>Mystery Anime</u></div>
+    <div class="scroll-section">
+      <div class="anime-card">
+        <a href="./death note.html">
+          <img src="./Screenshot_2025-05-11-07-02-55-49_680d03679600f7af0b4c700c6b270fe7.jpg" alt="Jujutsu Kaisen">
+          <h3>Death Note</h3>
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="https://www.gvhdbjs.site/p/the-shiunji-family-children.html?m=1">
+          <img src="./images (1) (9).jpeg" alt="Naruto">
+          <h3>Erased</h3>
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="./sakamoto old days.html">
+          <img src="./images (1) (8).jpeg" alt="Sakamoto Days">
+          <h3>Dead Mount Death Play</h3>
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="./wind breaker.html">
+          <img src="./Paranoia_Agent.png" alt="Solo Leveling">
+          <h3>Paranoia Agent</h3>
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="https://www.gvhdbjs.site/p/teogonia-season-1.html?m=1">
+          <img src="/images (1) (11).jpeg" alt="Demon Slayer">
+          <h3>The Promised Neverland</h3>
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="/images (1) (10).jpeg">
+          <img src="/images (1) (10).jpeg" alt="Death Note">
+          <h3>Another</h3>
+
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="https://www.gvhdbjs.site/p/devil-man-cry-body-font-family-arial.html?m=1">
+          <img src="./images (1) (15).jpeg" alt="Devil May Cry">
+          <h3>Stains;Gate</h3>
+          
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="./images (1) (13).jpeg">
+          <img src="./images (1) (13).jpeg" alt="Konosuba">
+          <h3>Higurashi</h3>
+          
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="https://www.gvhdbjs.site/p/classroom-of-elite-season-1_7.html">
+          <img src="./Odd_Taxi_manga_cover.jpg" alt="Classroom Of Elite">
+          <h3>Odd Taxi</h3>
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="./Jojo Bizzare adventure.html">
+          <img src="./images (1) (14).jpeg" alt="Jojo's Bizzare Adventure">
+          <h3>Id Invaded</h3>
+        </a>
+      </div>
+
+      <div class="anime-card">
+        <a href="./overlord.html">
+          <img src="./Case_Closed_1st_Key_Visual.jpg" alt="Overlord">
+          <h3>Case Closed</h3>
+        </a>
+      </div>
+
+     <div class="anime-card">
+          <a href="./Black Butler.html">
+            <img src="/Boogiepop_Phantom_cover.jpg">
+            <h3>Boogiepop Phantom</h3></a>
+</div>
+</body>
+</html>
